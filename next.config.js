@@ -1,6 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+  i18n: {
+    locales: ["de", "en"],
+    defaultLocale: "en",
+  },
+  images: {
+    domains: ["media.graphassets.com"],
+  },
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
+};
