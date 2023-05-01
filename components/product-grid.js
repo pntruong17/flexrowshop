@@ -4,11 +4,11 @@ function ProductGrid({ products }) {
   return (
     <>
       <h2 className="text-5xl md:text-8xl lg:text-9xl font-Staatliches font-bold">
-        Our Collection
+        Our products
       </h2>
       <div>
         <button className="rounded-full border-4 border-black mr-1 md:mr-5 py-1 px-2 md:py-10 md:px-16 text-xl md:text-3xl lg:text-4xl font-Staatliches font-bold cursor-pointer mb-2">
-          Winter Collection
+          Best Sale
         </button>
         <button className="rounded-full border-4 border-black mr-1 md:mr-5 py-1 px-2 md:py-10 md:px-16 text-xl md:text-3xl lg:text-4xl font-Staatliches font-bold cursor-pointer mb-2">
           New arrival

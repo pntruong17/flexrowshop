@@ -31,9 +31,9 @@ function ProductCard({ id, images, name, price, slug }) {
               />
             ) : null}
           </Link>
-          <div className="w-full relative z-20 flex flex-row justify-between items-center pointer-events-auto">
+          <div className="w-full relative z-20 flex flex-row justify-between items-center ">
             <div className="w-10 h-10">
-              <HeartIcon on />
+              <HeartIcon />
             </div>
             <p className="text-gray-800 text-2xl font-Staatliches rounded-full bg-white py-2 px-3">
               {formatCurrencyValue({
@@ -42,11 +42,11 @@ function ProductCard({ id, images, name, price, slug }) {
               })}
             </p>
           </div>
-          <div className="w-full relative z-20">
+          <Link href={`/products/${slug}`} className="w-full relative z-20">
             <p className="w-full text-center h-auto rounded-[60px] bg-white font-Staatliches text-2xl sm:text-5xl font-black hover:text-indigo-600 p-3">
               {name}
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </article>

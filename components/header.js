@@ -7,7 +7,7 @@ import { useSettingsContext } from "@/context/settings";
 
 function Header({ pages = [] }) {
   console.log(pages);
-  const { cartTotal } = useCart();
+  const { cartTotal, totalItems } = useCart();
   const { activeCurrency } = useSettingsContext();
 
   return (
@@ -15,7 +15,9 @@ function Header({ pages = [] }) {
       <div className="py-6 w-full">
         <nav className="flex items-center justify-between flex-wrap space-x-4">
           <Link href="/">
-            <h3 className="text-2xl w-32 font-black font-Abril">Flexrow</h3>
+            <h3 className="text-3xl w-32 font-black font-Abril tracking-tighter">
+              Flexrow
+            </h3>
           </Link>
           {pages.length ? (
             <ul className="hidden md:mx-auto md:block md:flex-grow">
@@ -31,7 +33,7 @@ function Header({ pages = [] }) {
               ))}
             </ul>
           ) : null}
-          <div className="flex items-center">
+          <div className="flex items-center font-Outfit relative">
             <Link href="/cart" className="flex space-x-2">
               <ShoppingCartIcon
                 className="h-6 w-6 text-gray-400"
@@ -44,6 +46,11 @@ function Header({ pages = [] }) {
                 })}
               </span>
             </Link>
+            {totalItems && (
+              <span className="absolute left-3 -top-1 w-4 h-4 rounded-full bg-red-500 text-white text-[10px] flex justify-center font-semibold">
+                {totalItems}
+              </span>
+            )}
           </div>
         </nav>
       </div>

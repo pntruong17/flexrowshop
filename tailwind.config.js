@@ -20,6 +20,7 @@ module.exports = {
       },
       colors: {
         body_color: "#FFEBD2",
+        heart: "#FFB4B4",
       },
     },
   },

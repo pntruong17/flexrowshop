@@ -61,7 +61,7 @@ function ProductPageUI({ product }) {
   };
 
   return (
-    <div className="md:flex -mx-6 font-Staatliches">
+    <div className="md:flex -mx-6 font-Staatliches pb-10 border-b-2 border-gray-500">
       <div className="mb-8 px-6 md:mb-0 md:w-1/2">
         <h3 className="mb-5 text-xl font-bold text-gray-600 font-Poppins">
           <Link href={"/"}>Home</Link>
@@ -70,11 +70,13 @@ function ProductPageUI({ product }) {
           {" > "}
           <span className="cursor-pointer">{product.name}</span>
         </h3>
-        <div className="w-full overflow-hidden relative bg-gainsboro rounded-[50px]">
+        <div className="w-full h-[600px] overflow-hidden relative bg-gainsboro rounded-[50px]">
           <Image
+            fill
+            objectFit="cover"
             src={imageShowing}
-            height={primaryImage.height}
-            width={primaryImage.width}
+            //height={primaryImage.height}
+            //width={primaryImage.width}
             alt={product.name}
             title={product.name}
           />
@@ -92,6 +94,7 @@ function ProductPageUI({ product }) {
                   objectFit="cover"
                   src={image.url}
                   alt={"item image"}
+                  priority
                 />
               </div>
             ))}
